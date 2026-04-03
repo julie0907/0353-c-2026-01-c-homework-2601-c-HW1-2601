@@ -55,8 +55,12 @@
 
 해결: 최종 결과값인 totalPay를 정수형으로 선언하고, 계산 과정에서 실수를 더한 뒤 정수로 저장하여 소수점 이하를 자연스럽게 처리하는 방식을 적용함.
 ### **📁 증빙 자료:**
-  * [1차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)
-  * [1차과제_실행결과.jpg]
+  
+[[1차_AI협업캡처.pdf].pdf](https://github.com/user-attachments/files/26461921/1._AI.pdf.pdf)
+결과 화면 캡쳐
+<img width="1250" height="820" alt="화면 캡처 2026-04-03 232827" src="https://github.com/user-attachments/assets/4d75b970-b979-476c-a878-80df7664f3e3" />
+
+
 
 <br>
 
