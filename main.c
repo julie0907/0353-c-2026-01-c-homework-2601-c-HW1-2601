@@ -5,18 +5,21 @@
 */
 
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
+
+  system("chcp 65001")
+  system("cls");
   // 1. 변수 선언 (5개 이상, 3가지 자료형 사용) 
   char initial;
-  int hourlywage;
+  int hourlyWage;
   int workingHours;
   float foodAllowance;
-  int totalPay
+  int totalPay;
 
   // 2. 프로그램 시작 화면 출력 
-  printf("-------- 아르바이트 일단 계산 시스템 --------\n);
+  printf("-------- 아르바이트 일단 계산 시스템 --------\n");
   printf("오늘도 업무를 수행하시느라 고생 많으셨습니다!\n\n");
 
   // 3.사용자 입력 받기
@@ -34,7 +37,7 @@ int main()
 
   // 4. 산술 연산 수행 (사칙연산 1회 이상 필수)
   // 계산 공식: (hourlyWage * workingHours) + (int)foodAllowance;
-
+               totalPay = (hourlyWage * workingHours) + (int) foodAllowance;
   // 5. 최종 결과 출력 
   printf("\n-------- [ %c 님의 근무 정산 리포트 ] --------\n", initial);
   printf("1. 기본 급여 합계: %d 원\n", hourlyWage * workingHours);
