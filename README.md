@@ -59,7 +59,13 @@
 
 
 ### **📁 증빙 자료:**
-  
+
+결과
+<img width="1250" height="819" alt="스크린샷 2026-04-03 224912" src="https://github.com/user-attachments/assets/7d8cf699-1c88-41c9-85a7-880d011b2c9c" />
+AI 협업 과정
+[1._AI.pdf.pdf](https://github.com/user-attachments/files/26526272/1._AI.pdf.pdf)
+
+
 
  
   
