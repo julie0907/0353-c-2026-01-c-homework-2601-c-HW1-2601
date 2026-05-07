@@ -17,9 +17,13 @@ int main()
   int workingHours;
   float foodAllowance;
   int totalPay;
+  // 2차 추가 변수
+    int totalHoursPerWeek;
+    int bonusOption;
+    double finalPay, bonusAmount = 0;
 
   // 2. 프로그램 시작 화면 출력 
-  printf("-------- 아르바이트 일단 계산 시스템 --------\n");
+  printf("-------- 아르바이트 일당 계산 시스템 --------\n");
   printf("오늘도 업무를 수행하시느라 고생 많으셨습니다!\n\n");
 
   // 3.사용자 입력 받기
