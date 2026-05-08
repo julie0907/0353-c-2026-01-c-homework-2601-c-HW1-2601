@@ -85,7 +85,7 @@ int main()
  
   // 4. 산술 연산 수행 (사칙연산 1회 이상 필수)
   // 계산 공식: (hourlyWage * workingHours) + (int)foodAllowance;
-               totalPay = (hourlyWage * workingHours) + (int) foodAllowance;
+  totalPay = (hourlyWage * workingHours) + (int) foodAllowance;
   // 5. 최종 결과 출력 
   printf("\n-------- [ %c 님의 근무 정산 리포트 ] --------\n", initial);
   printf("1. 기본 급여 합계: %d 원\n", hourlyWage * workingHours);
