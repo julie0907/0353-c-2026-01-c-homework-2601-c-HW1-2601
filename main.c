@@ -78,9 +78,9 @@ int main()
         printf("- 근무 시간이 잘못 입력되었습니다.\n");
     }
 
-    // 5. 최종 계산 (논리 연산자 활용 예시)
-    finalPay = (hourlyWage * workingHours) + foodAllowance + bonusAmount;
-
+    // 5. 최종 계산 
+   totalPay = (int)finalPay; 
+   printf("3. 최종 합산 일당: %d원\n", totalPay);
    
  
   // 4. 산술 연산 수행 (사칙연산 1회 이상 필수)
