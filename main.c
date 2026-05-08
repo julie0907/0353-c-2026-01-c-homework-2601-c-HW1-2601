@@ -11,6 +11,7 @@ int main()
 
   system("chcp 65001")
   system("cls");
+  
   // 1. 변수 선언 (5개 이상, 3가지 자료형 사용) 
   char initial;
   int hourlyWage;
