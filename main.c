@@ -37,7 +37,7 @@ int main()
   printf("오늘 실제 근무한 시간(정수)을 입력하세요: ");
   scanf("%d", &workingHours);
 
-  printf("오늘 지급받은 식비 지원금(살수)을 입력하세요: ");
+  printf("오늘 지급받은 식비 지원금(실수)을 입력하세요: ");
   scanf("%f", &foodAllowance);
 
   printf("이번 주 총 근무 시간(정수)를 입력하세요: "); // 주휴수당 판별용
