@@ -90,8 +90,8 @@ int main()
   printf("\n-------- [ %c 님의 근무 정산 리포트 ] --------\n", initial);
   printf("1. 기본 급여 합계: %d 원\n", hourlyWage * workingHours);
   printf("2. 식비 지원 내역: %.1f 원\n", foodAllowance);
-  printf("추가 수당 합계: %.0f 원\n", bonusAmount);
-  printf("3. 최종 합산 일당: %d원\n", totalPay);
+  printf("3.추가 수당 합계: %.0f 원\n", bonusAmount);
+  printf("4. 최종 합산 일당: %d원\n", totalPay);
   printf("------------------------------------------------\n");
   printf("내일도 활기찬 하루 되시길 %c 님을 응원합니다!\n", initial);
 
