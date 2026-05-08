@@ -50,10 +50,17 @@ int main()
   // switch문: 업무 강도에 따른 보너스 계산
     switch (bonusOption) 
     {
-        case 1: bonusAmount = 0; break;
-        case 2: bonusAmount = (hourlyWage * workingHours) * 0.05; break; // 5% 보너스
-        case 3: bonusAmount = (hourlyWage * workingHours) * 0.1; break;  // 10% 보너스
-        default: printf("잘못된 옵션입니다. 보너스는 0원으로 처리됩니다.\n");
+        case 1: bonusAmount = 0;
+        break;
+       
+        case 2: bonusAmount = (hourlyWage * workingHours) * 0.05; 
+        break; // 5% 보너스
+        
+        case 3: bonusAmount = (hourlyWage * workingHours) * 0.1; 
+        break;  // 10% 보너스
+        
+        default: 
+        printf("잘못된 옵션입니다. 보너스는 0원으로 처리됩니다.\n");
     }
 
     // if ~ else if 중첩문: 주휴수당 및 추가 인센티브 판별
