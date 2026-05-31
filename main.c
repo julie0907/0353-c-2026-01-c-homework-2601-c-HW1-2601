@@ -38,12 +38,12 @@ int main()
 
   while (1)
     {
-      printf("\n------------메인메뉴------------\n")
+      printf("\n------------메인메뉴------------\n");
       printf("1. 근무 정보 입력\n");
       printf("2. 일당 계산 및 리포트 조회\n");
       printf("3. 주간 근무 분석\n");
       printf("4. 종료\n");
-      printf("----------------------------------\n")
+      printf("----------------------------------\n");
       scanf("%d", &choice);
 
       if (choice == 1)
@@ -54,7 +54,7 @@ int main()
       {
         if (g_isDataEntered == 0)
         {
-          printf("\n[알람] 먼저 1번 메뉴에서 근무 정보를 입력해주세요!\n");
+          printf("\n[알림] 먼저 1번 메뉴에서 근무 정보를 입력해주세요!\n");
         }
         else
         {
@@ -65,7 +65,7 @@ int main()
       {
         if (g_isDataEntered == 0)
         {
-         printf("\n[알람] 먼저 1번 메뉴에서 근무 정보를 입력해주세요!\n");
+         printf("\n[알림] 먼저 1번 메뉴에서 근무 정보를 입력해주세요!\n");
         }
         else
         {
@@ -74,7 +74,7 @@ int main()
       }
       else if (choice == 4)
       {
-        print("\n프로그램을 종료합니다. 오늘도 수고하셨습니다!\n");
+        printf("\n프로그램을 종료합니다. 오늘도 수고하셨습니다!\n");
         break;
       }
       else
@@ -107,6 +107,9 @@ void inputData(void)
 
   printf("이번 주 총 근무 시간(정수)를 입력하세요: "); // 주휴수당 판별용
   scanf("%d", &g_totalHoursPerWeek);
+
+  g_isDataEntered = 1;
+  printf("\n[완료] 정보가 정상적으로 저장되었습니다.\n");
 }
 
 // 2) 보너스 계산 함수 (매개변수 3개 + double 변환)
@@ -120,7 +123,7 @@ double calculateBonus(int wage, int hours , int option)
           bonus = 0;
           break;
         case 2: 
-          bonusAmount = (wage * Hours) * 0.05; 
+          bonus = (wage * hours) * 0.05; 
           break;
         case 3: 
           bonus = (wage * hours) * 0.1; 
@@ -137,12 +140,12 @@ double calculateBonus(int wage, int hours , int option)
 int analyzeWeekly(int totalHours)
 {
   printf("\n---------주간 근무 분석----------\n");
-  prinf("입력된 주간 총 근무 시간: %d 시간\n" , totalHours);
+  printf("입력된 주간 총 근무 시간: %d 시간\n" , totalHours);
 
   if (totalHours >=40)
   {
-    pritnf("- 우수 성실 근로자 등급입니다!\n");
-    pritnf("- 주휴수당 지급 대상입니다.\n");
+    printf("- 우수 성실 근로자 등급입니다!\n");
+    printf("- 주휴수당 지급 대상입니다.\n");
     return 2;
   }
   else if (totalHours >=15)
