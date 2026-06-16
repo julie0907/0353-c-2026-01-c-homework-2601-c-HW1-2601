@@ -20,7 +20,9 @@ void inputData(void); //압력(전역변수 변경)
 double calculateBonus(int wage, int hours, int option); //보너스 계산 (매계변수 + 변환값)
 int analyzeWeekly(int totalHours); //주간 분석 (매개변수 + 변환값)
 void printReport(char name); //리포트 출력 (매개변수)
-
+void displayMenu();
+void printWeeklypays(int arr[], int size);
+int calculatetotalpointer(int *ptr, int size);
 
 // ---메인함수---
 
