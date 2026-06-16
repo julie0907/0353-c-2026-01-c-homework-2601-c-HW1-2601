@@ -1,7 +1,7 @@
 /* 
   파일이름: [고미현/60252008] 
   작 성 자: 고미현
-  하 는 일: 프로그램 실행 + 무한루프 메뉴 시스템 + 함수 분리 (아르바이트 일당 계산)
+  하 는 일: 프로그램 실행 + 무한루프 메뉴 시스템 + 함수 분리 + 배열 및 포인터 적용 (아르바이트 일당 계산)
 */
 
 #include <stdio.h>
@@ -21,19 +21,22 @@ double calculateBonus(int wage, int hours, int option); //보너스 계산 (매�
 int analyzeWeekly(int totalHours); //주간 분석 (매개변수 + 변환값)
 void printReport(char name); //리포트 출력 (매개변수)
 void displayMenu();
-void printWeeklypays(int arr[], int size);
-int calculatetotalpointer(int *ptr, int size);
+void printWeeklypays(int arr[], int size);   // 4차 과제 배열
+int calculatetotalpointer(int *ptr, int size); // 4차 과제 포인터
 
 // ---메인함수---
 
 int main()
-{
+{ 
+  
 
   system("chcp 65001");
   system("cls");
   
   int choice;
-
+// 4차 과제 
+  int weeklypays[5] = {0, };
+  int currentday = 0;
   printf("==================================================\n");
   printf("        아르바이트 일당 계산 시스템 v3\n");
   printf("==================================================\n");
@@ -44,8 +47,12 @@ int main()
       printf("1. 근무 정보 입력\n");
       printf("2. 일당 계산 및 리포트 조회\n");
       printf("3. 주간 근무 분석\n");
-      printf("4. 종료\n");
+      printf("4. 주간 내역 조회 (배열 순회)\n");
+      printf("5. 주간 총수입 계산(포인터 연산)\n");
+      printf("6. 종료\n");
+      
       printf("----------------------------------\n");
+      printf("메뉴 선택:");
       scanf("%d", &choice);
 
       if (choice == 1)
@@ -60,9 +67,18 @@ int main()
         }
         else
         {
-          printReport(g_initial);
-        }
+          if(currentday < 5)
+          {
+         weeklypays[currentday] =  printReport(g_initial);
+            printf("\n [안내] %d일차 일당 %d원이 배열에 저장되었습니다.\n", currentday +1, weeklypays[currentday]);
+            currentday++;
+          }
+          else
+          {
+            pruntf("\n[알림] 이미 5일치 근무 내역이 모두 꽉 찼습니다!\n")
+            }
       }
+        
       else if (choice == 3)
       {
         if (g_isDataEntered == 0)
@@ -74,14 +90,25 @@ int main()
           analyzeWeekly(g_totalHoursPerWeek);
         }
       }
+
       else if (choice == 4)
+      {
+        printweeklypays(weeklypays, currentday);
+      }
+
+      else if (choice ==5)
+      {
+        int totalincome = caculatetotalpointer(weeklypays, currentday);
+        printf("\n[결과] 이번주 총 합산 수입은 %d원 입니다.\n", totalincome);
+      }
+      else if (choice==6)
       {
         printf("\n프로그램을 종료합니다. 오늘도 수고하셨습니다!\n");
         break;
       }
       else
       {
-        printf("\n[오류] 1~4 사이의 번호만 입력 가능합니다.\n");
+        printf("\n[오류] 1~6 사이의 번호만 입력 가능합니다.\n");
       }
     }
     return 0;
@@ -194,5 +221,29 @@ void printReport(char name)
   printf("------------------------------------------------\n");
   printf("내일도 활기찬 하루 되시길 %c 님을 응원합니다!\n", name);
 
+return(int) finalPay;
 
+}
+
+void printWeeklypays(int arr[], int size)
+{
+  printf("\n------- 주간 일당 내역 -------\n");
+if(size==0)
+{
+printf("아직 저장된 근무 내역이 없습니다.\n");
+return;
+}
+for(int i =0; i<size; i++)
+{ 
+printf("%d일차 일당 : %d원 \n",i+1, arr[i]);
+}
+}
+int calculatetotalpointer(int *ptr,int size)
+{
+  int total =0;
+  for(int i =0; i<size; i++)
+{ 
+total += *(ptr + i);
+}
+return total;
 }
