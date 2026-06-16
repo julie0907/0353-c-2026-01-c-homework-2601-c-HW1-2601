@@ -28,7 +28,6 @@ int calculatetotalpointer(int *ptr, int size); // 4차 과제 포인터
 
 int main()
 { 
-  
 
   system("chcp 65001");
   system("cls");
